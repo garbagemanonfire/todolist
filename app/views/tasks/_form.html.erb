@@ -20,24 +20,5 @@
   </div>
 <% end %>
 
-<h1>Task List</h1>
 
-<table>
-  <tr>
-    <th>Task (click to complete)</th>
-    <th>Update Task</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @tasks.reverse_each do |task| %>
-  <tr>
-    <td><%= link_to task.name, task, method: :delete, data: { confirm: 'Are you sure you are complete with your task?' } %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
 
